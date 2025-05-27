@@ -2,31 +2,369 @@
   &-1
     animation: float1 3.5s ease-in-out infinite alternate
     position: absolute
-    top: 20%
-    right: 10%
+    top: 56%
+    right: 90%
+    width: 98px
+    z-index: 1
   &-2
-    animation: float1 2.8s ease-in-out infinite alternate
+    animation: float2 2.5s ease-in-out infinite alternate
     position: absolute
-    top: 51%
-    right: 30%
+    top: 25%
+    right: 10%
+    width: 98px
+    z-index: 1
+
+.banner-principal__row .banner-principal__img
+  width: 383px !important
 
 @keyframes float1
   0%
     transform: translateY(20px)
+
   100%
     transform: translateY(0px)
+
+@keyframes float2
+  0%
+    transform: translateY(0px)
+
+  100%
+    transform: translateY(20px)
+
+@keyframes latido
+  0%, 100%
+    transform: scale(1)
+  50%
+    transform: scale(1.1)
+  
   
 .banner-principal .tarjeta
   background-position: left 50% !important
+  @media screen and (max-width: $bp-max-xl)
+    background-image: url("../assets/curso/portada/fondo-banner-principal.png") !important
+  @media screen and (max-width: $bp-max-lg)
+    background-image: url("../assets/curso/portada/fondo-banner-principal-md.png") !important
+  @media screen and (max-width: $bp-min-sm)
+    background-image: url("../assets/curso/portada/fondo-banner-principal-sm.png") !important
 
-.banner-principal__row .banner-principal__img
-  width: 400px !important  
+
 
 .titulo-principal.color-acento-contenido .titulo-principal__numero span
-  color: white !important
+  color: $color-sistema-texto !important   
+
+//.banner-interno__fondo
+  background-image: url("../assets/curso/portada/img1.png") !important
 
 .banner-interno__titulo__icono i
-  color: $color-primario
+  color: white !important
+.titulo-principal__numero span
+  color: white !important
+
+.titulo-principal.color-acento-contenido
+  .titulo-principal__numero span, 
+  .banner-interno__titulo__icono i
+    color: $color-sistema-texto !important
 
 figcaption
   font-weight: normal
+ 
+
+// Full Width Background
+.bg-full-width, .bg-full-width-2
+  background-repeat: no-repeat
+  background-position: bottom
+  margin-inline: -3.3rem
+  @media screen and (max-width: $bp-max-sm)
+    padding-left: 1.5rem
+    padding-right: 1.5rem
+.bg-full-width
+  background-size: cover
+.bg-full-width-2
+  background-size: contain
+
+.bg-fondo
+  &-1
+    background-image: url("../assets/bg/bg1.png") !important
+    background-position: bottom
+  &-2
+    background-image: url("../assets/bg/bg2.png") !important
+    background-position: bottom
+  &-3
+    background-image: url("../assets/bg/bg3.png") !important
+    background-position: top
+  &-4
+    background-image: url("../assets/bg/bg4.png") !important
+    background-position: bottom
+  &-5
+    background-image: url("../assets/bg/bg5.png") !important
+    background-position: top
+  &-6
+    background-image: url("../assets/bg/bg6.png") !important
+    background-position: bottom
+  &-7
+    background-image: url("../assets/bg/bg7.png") !important
+    background-position: bottom
+  &-8
+    background-image: url("../assets/bg/bg8.png") !important
+    background-position: bottom
+  &-9
+    background-image: url("../assets/bg/bg9.svg") !important
+    background-position: bottom
+  &-10
+    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(254, 252, 239, 1) 32%, rgba(254, 252, 239, 1) 68%, rgba(255, 255, 255, 1) 100%);
+  &-slider
+    background-image: url("../assets/bg/bg-slider.png") !important
+    background-position: bottom
+
+
+.bg-color
+  &-1
+    background-color: #ACBAAE !important
+  &-2
+    background-color: #EBEEEB !important
+  &-3
+    background-color: #F6E15C !important
+  &-4
+    background-color: #FDF9DE !important
+  &-5
+    background-color: #FAEFA0 !important
+  &-6
+    background-color: #EBEBEB !important
+  &-7
+    background-color: #D8CABD !important
+  &-8
+    background-color: #EFE9E4 !important
+  &-9
+    background-color: #CDCDCD !important
+  &-10
+    background-color: #EBEBEB !important
+  &-11
+    background-color: #2F5235 !important
+  &-12
+    background-color: #FBF3BE !important
+  &-13
+    background-color: #FEFCEF !important
+  &-14
+    background-color: #FAFAFA !important
+  &-15
+    background-color: #D5DCD7
+  &-16
+    background-color: #D5DCD6
+  &-17
+    color: #2F5235 !important
+  &-18
+    background-color: #F7F4F2
+  &-19
+    background-color: #FCF5CC
+  &-20
+    background-color: #EDF2F4
+  &-21
+    color: #26422A !important
+  &-white
+    background-color: white !important
+    border: 1px solid $lightest-gray
+  &-secundario
+    background-color: $color-secundario !important
+  &-sintesis
+    background-color: #F6F6F6
+
+// Variables
+$custom-card-border-radius: 0px
+$custom-card-shadow: 0 4px 8px rgba(0,0,0,0.1)
+$custom-card-text-bg: #FFF
+$custom-card-text-padding: 15px
+$custom-card-text-font-size: 14px
+$custom-card-img-height: 205px
+.custom-image-card
+  border-radius: $custom-card-border-radius
+  overflow: hidden
+  height: 100%
+  background-color: $custom-card-text-bg
+  transition: transform 0.3s ease 
+  cursor: pointer
+  &:hover
+    transform: scale(1.01)
+  &__image
+    height: $custom-card-img-height
+    box-shadow: none !important
+    object-fit: cover
+
+
+.rounded-top
+  border-top-left-radius: 16px !important
+  border-top-right-radius: 16px !important
+
+.rounded-bottom
+  border-bottom-left-radius: 16px !important
+  border-bottom-right-radius: 16px !important
+
+.box-shadow
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important
+
+.titulo-tres
+  position: relative
+  background: $color-acento-contenido
+  border-radius: 8px
+  display: inline-block
+  padding: 0.5rem 1.4rem 0.5rem 80px
+
+  h3, h4
+    margin: 0
+    line-height: 110% !important
+    color: black !important
+    @media screen and (max-width: $bp-max-sm)
+      font-size: 0.99rem
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0px
+    left: 0
+    width: 100%
+    height: 67px
+    transform: translateX(8px)
+    background: url('../assets/bullets/icon1.svg') transparent no-repeat bottom left
+
+/*Componets custom*/
+.linea-tiempo-d.color-primario .linea-tiempo-d__item--selected .linea-tiempo-d__item__content,
+.linea-tiempo-d.color-primario .linea-tiempo-d__item--selected .linea-tiempo-d__item__number
+  background-color: #F1D3F6 !important
+.linea-tiempo-d.color-primario .linea-tiempo-d__item__content,
+.linea-tiempo-d.color-primario .linea-tiempo-d__item__number
+  background-color: #D4F0E0 !important
+
+.lista-ul--color.color-adicional-1 li > i:first-of-type
+  color: $color-adicional-1 !important
+.tarjeta--boton.color-primario
+  background-color: #F1D3F6 !important
+.slyder-a__btn--sigt, .slyder-a__btn--atrs 
+    background-color: $color-acento-botones;
+.slyder-a__bullets__item 
+    background-color: #FCF5C6
+    border: 1px solid #FCF5C6;
+.slyder-a__bullets__item--active 
+    background-color: $color-acento-contenido !important
+    border-color: $color-acento-contenido !important;
+
+// Slider Bullet Responsive Styles
+@media screen and (max-width: $bp-max-sm)
+ .slyder-a__bullets__item
+   margin: 0 3px
+
+// Custom List Styles
+.custom-list
+  list-style-type: none
+  padding-left: 0
+  
+  li
+    position: relative
+    padding-left: 1.4rem
+    
+    &::before
+      //content: url('../assets/bullets/icon2.svg')
+      position: absolute
+      left: 0
+      top: 2%
+      width: 13px
+      height: 13px
+
+
+
+// Carousel Styles
+.carousel-bg .fas
+ &.fa-chevron-left, &.fa-chevron-right
+   display: inline-flex
+   align-items: center
+   justify-content: center
+   width: 40px
+   height: 40px
+   background-color: $color-acento-botones
+   border-radius: 50%
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+   color: black
+   font-size: 16px
+
+
+// Slider Responsive Styles
+@media screen and (max-width: $bp-max-sm)
+ .slyder-f
+   &__main
+     width: 76%
+   &__btn
+     width: 12%
+
+@media screen and (max-width: $bp-max-xs)
+ .slyder-f
+   &__main
+     width: 60%
+   &__btn
+     width: 20%
+
+.tarjeta.acordeonA
+  background-color: #D8CABD
+
+.acordion__accion__btn--a
+  background-color: $color-acento-botones !important
+  i
+    color: black !important
+
+.acordion__activo
+  background-color: #FBF3BE !important
+
+.tabs-b__tab 
+  background-color: #E8F5D5;
+
+.tabs-b.color-primario .tabs-b__tab--active
+  background-color: #FFF !important
+
+.tabs-b__content-item
+  background-color: #FDF8E5 !important
+
+
+.tabs-a__tab
+  background-color: #EFEAE5
+.tarjeta.color-acento-botones--borde
+  background-color: #FCF5CC
+  border: solid 4px #FCF5CC
+
+
+.rounded-bottom
+  border-bottom-left-radius: 16px !important
+  border-bottom-right-radius: 16px !important
+
+.rounded-top
+  border-top-left-radius: 16px !important
+  border-top-right-radius: 16px !important
+
+.tabs-c__header
+  margin-bottom: 0px !important
+.tabs-c__content-item
+  background-color: #F5F5F5 !important
+
+///////// Card hover --------------------------------------
+.crd_hover_txt
+  position: relative  
+  padding: 0 !important
+  overflow: hidden !important  
+  &:hover    
+    .crd_hover_txt--body   
+      transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 
+      transform: translateY(0)
+
+  .crd_hover_txt--body
+    position: absolute
+    padding: 1.5rem
+    bottom: 0    
+    transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1)
+    transform: translateY(calc( 100% - 3.85rem ))
+    background-color: #2F5235 !important
+    color: white !important
+  
+  @media (min-width:1200px) and (max-width:1400px)  
+    .crd_hover_txt--body
+      p
+        font-size: 0.85em
+
+
+
+
