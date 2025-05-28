@@ -48,13 +48,13 @@
         p Para obtenerlos, se coloca la horma apoyada sobre una superficie recta, asegurando que la línea de plantilla quede perpendicular a dicha superficie. La parte posterior de la horma debe tocar completamente la base; el otro punto de contacto con la superficie, conocido como punto tangencial, corresponde al punto metatarsiano. Este procedimiento se realiza en ambas caras de la horma, como se aprecia en la imagen siguiente.
     
     .row.mb-5.justify-content-center.align-items-center.bg-color-20.p-5
-      .col-lg-5
+      .col-lg-5.mb-3.mb-lg-
         .titulo-sexto.color-acento-contenido
           h5 Figura 1.
           span Punto metatarsiano externo
         figure
           img(src="@/assets/curso/temas/tema1/6.png", data-aos="zoom-in", alt="Vista lateral de una horma con indicación del punto metatarsiano externo, marcado en la zona sobresaliente del costado. ")
-      .col-lg-5
+      .col-lg-5.mb-3.mb-lg-
         .titulo-sexto.color-acento-contenido
           h5 Figura 2.
           span Punto metatarsiano interno
@@ -96,13 +96,13 @@
     
        
     .row.mb-5.justify-content-center.align-items-center.bg-color-20.p-5
-      .col-lg-5
+      .col-lg-5.mb-3.mb-lg-
         .titulo-sexto.color-acento-contenido
           h5 Figura 5.
           span Determinación del punto de atraque externo 
         figure
           img(src="@/assets/curso/temas/tema1/11.png", data-aos="zoom-in", alt="Identificación del punto de atraque externo sobre la horma. ")
-      .col-lg-5
+      .col-lg-5.mb-3.mb-lg-
         .titulo-sexto.color-acento-contenido
           h5 Figura 6.
           span Determinación del punto de atraque interno

@@ -24,10 +24,10 @@
           h2 3.1 Reseña histórica
         
         .row.mb-5
-          .col-lg-5.order-2
+          .col-lg-5.order-lg-2.mb-3.mb-lg-0
             figure
               img(src="@/assets/curso/temas/tema3/2.png", data-aos="zoom-in")
-          .col-lg-7.order-1.mb-3.mb-lg-0
+          .col-lg-7.order-lg-1
             p.mb-5(data-aos="fade-left") El calzado Oxford tiene sus orígenes en las Islas Británicas, particularmente en Escocia e Irlanda, donde existía un modelo similar conocido como "Balmoral". Sin embargo, fue en Inglaterra donde adquirió notoriedad y su nombre actual, gracias a los estudiantes de la Universidad de Oxford. A mediados del siglo XIX, estos jóvenes comenzaron a usar este estilo como una alternativa más cómoda y moderna a las tradicionales botas altas, marcando así el inicio de su popularidad.
         
             .bg-color-7.p-4(data-aos="fade-left")
